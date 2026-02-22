@@ -57,3 +57,56 @@ def calculate_total():
 
     amounts = list(map(lambda x: x["amount"], expenses))
     return reduce(lambda x, y: x + y, amounts)
+
+#----------------------- DAY 2 -----------------------------------
+# Budget Check & Expense Analytics
+
+def check_budget():
+    """
+    Check whether total expense exceeds budget.
+    """
+    total = calculate_total()
+
+    if total > BUDGET:
+        print("Budget exceeded.")
+    elif total == BUDGET:
+        print("Budget fully utilized.")
+    else:
+        print("You are within budget.")
+
+
+def category_summary():
+    """
+    Category-wise expense summary.
+    """
+    summary = {}
+
+    for exp in expenses:
+        cat = exp["category"]
+        summary[cat] = summary.get(cat, 0) + exp["amount"]
+
+    print("Category Summary:")
+    for key in summary:
+        print(key, ":", summary[key])
+
+
+def show_high_expenses():
+    """
+    Show expenses above user-defined amount.
+    """
+    threshold = float(input("Enter minimum amount: "))
+    result = list(filter(lambda x: x["amount"] > threshold, expenses))
+
+    if len(result) == 0:
+        print("No high expenses found.")
+    else:
+        for exp in result:
+            print(exp)
+
+
+def unique_categories():
+    """
+    Display unique expense categories.
+    """
+    cat_set = set(map(lambda x: x["category"], expenses))
+    print("Unique Categories:", cat_set)
