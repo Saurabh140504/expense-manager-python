@@ -68,4 +68,26 @@ Learned how to apply business logic like budget tracking
 Improved analytical thinking using real expense scenarios
 Strengthened problem solving skills for data analytics role
 
-Next step will focus on adding date based analysis and generating a final summary report.
+Day 3 Progress
+
+On Day 3, I completed the project by adding date based analysis and integrating the full menu driven system.
+
+Features Implemented
+
+Added monthly expense calculation using datetime
+Extracted month from date using datetime.strptime
+Generated final expense report with total and summary
+Integrated all functions into a complete menu driven program
+Structured final user interaction using while loop
+
+Learning from Day 3
+
+Learned how to work with date format and datetime module
+Understood how to analyze data month wise
+Practiced integrating multiple functions into one system
+Improved program flow control using while loop and conditions
+Gained confidence in building a complete end to end Python project
+
+
+
+
